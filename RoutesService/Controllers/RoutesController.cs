@@ -65,12 +65,12 @@ namespace RoutesService.Controllers
         }
 
         [HttpPut]
-        [Route("routes")]
-        public async Task<IActionResult> UpdateRoutes(RoutesDto routesDto)
+        [Route("routes/{routeId}")]
+        public async Task<IActionResult> UpdateRoutes(string routeId, RoutesDto routesDto)
         {
             try
             {
-                Routes route = _RoutesRepository.UpdateRoutes(routesDto);
+                Routes route = _RoutesRepository.UpdateRoutes(routeId, routesDto);
                 _context.Routes.Update(route);
                 await _context.SaveChangesAsync();
             }

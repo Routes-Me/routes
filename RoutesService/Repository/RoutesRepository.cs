@@ -75,12 +75,12 @@ namespace RoutesService.Repository
             };
         }
 
-        public Routes UpdateRoutes(RoutesDto routesDto)
+        public Routes UpdateRoutes(string routeId, RoutesDto routesDto)
         {
-            if (routesDto == null || routesDto.RouteId == null)
+            if (routesDto == null || string.IsNullOrEmpty(routeId))
                 throw new ArgumentNullException(CommonMessage.InvalidData);
 
-            Routes route = _context.Routes.Where(r => r.RouteId == Obfuscation.Decode(routesDto.RouteId)).FirstOrDefault();
+            Routes route = _context.Routes.Where(r => r.RouteId == Obfuscation.Decode(routeId)).FirstOrDefault();
             if (route == null)
                 throw new ArgumentException(CommonMessage.RoutesNotFound);
 

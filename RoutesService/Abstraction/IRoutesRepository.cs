@@ -9,7 +9,7 @@ namespace RoutesService.Abstraction
     {
         dynamic GetRoutes(string routeId, string include, Pagination pageInfo);
         Routes PostRoutes(RoutesDto routesDto);
-        Routes UpdateRoutes(RoutesDto routesDto);
+        Routes UpdateRoutes(string routeId, RoutesDto routesDto);
         Routes DeleteRoutes(string routeId);
     }
 }
