@@ -48,12 +48,12 @@ namespace RoutesService
             }));
 
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
+            services.Configure<Dependencies>(Configuration.GetSection("Dependencies"));
 
-            var appSettingsSection = Configuration.GetSection("AppSettings");
-            var appSettings = appSettingsSection.Get<AppSettings>();
             services.AddScoped<IRoutesRepository, RoutesRepository>();
             services.AddScoped<ITariffsRepository, TariffsRepository>();
             services.AddScoped<ICarriagesRepository, CarriagesRepository>();
+            services.AddScoped<ICarriersRepository, CarriersRepository>();
 
             services.AddApiVersioning(config =>
             {

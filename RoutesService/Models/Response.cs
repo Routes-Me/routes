@@ -15,4 +15,8 @@ namespace RoutesService.Models
         public Pagination pagination { get; set; }
         public JArray data { get; set; }
     }
+    public class CarriersGetResponse
+    {
+        public JObject data { get; set; }
+    }
 }

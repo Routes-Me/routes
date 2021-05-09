@@ -11,5 +11,6 @@
         public static string TariffsNotFound = "Tariff not found.";
         public static string CarriagesInserted = "Carriage inserted successfully.";
         public static string CarriageNotFound = "Carriage not found.";
+        public static string ConnectionFailure = "Request cannot be executed: unable to establish connection with the targeted machine.";
     }
 }
