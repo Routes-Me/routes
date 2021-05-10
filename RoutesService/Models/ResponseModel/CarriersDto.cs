@@ -4,8 +4,8 @@ namespace RoutesService.Models.ResponseModel
 {
     public class CarriersDto
     {
-        public string Title { get; set; }
-        public string Subtitle { get; set; }
+        public string RouteNumber { get; set; }
+        public string Destination { get; set; }
         public List<TicketsDto> Tickets { get; set; }
     }
 }

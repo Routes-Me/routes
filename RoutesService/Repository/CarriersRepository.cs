@@ -40,8 +40,8 @@ namespace RoutesService.Repository
             );
 
             CarriersDto carriersDto = new CarriersDto {
-                Title = carriage.Route.Title,
-                Subtitle = carriage.Route.Subtitle,
+                RouteNumber = carriage.Route.Title,
+                Destination = carriage.Route.Subtitle,
                 Tickets = ticketsDtosList
             };
 
